@@ -1,2 +1,6 @@
-MyFirstProgram.java
- MyFirstProgram
+learn_java/sandbox/Rectangle.java
+ learn_java.sandbox.Rectangle
+learn_java/sandbox/MyFirstProgram.java
+ learn_java.sandbox.MyFirstProgram
+learn_java/sandbox/Square.java
+ learn_java.sandbox.Square
