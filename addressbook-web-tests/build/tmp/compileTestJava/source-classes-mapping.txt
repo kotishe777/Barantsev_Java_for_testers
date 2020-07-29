@@ -1,4 +1,6 @@
 learn_java/addressbook/GroupCreationTests.java
  learn_java.addressbook.GroupCreationTests
+learn_java/addressbook/GroupData.java
+ learn_java.addressbook.GroupData
 learn_java/addressbook/GroupCreationTests2.java
  learn_java.addressbook.GroupCreationTests2
