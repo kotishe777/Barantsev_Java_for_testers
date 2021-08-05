@@ -1,0 +1,43 @@
+learn_java/addressbook/appmanager/HelperBase.java
+ learn_java.addressbook.appmanager.HelperBase
+learn_java/addressbook/appmanager/SessionHelper.java
+ learn_java.addressbook.appmanager.SessionHelper
+learn_java/addressbook/model/Groups.java
+ learn_java.addressbook.model.Groups
+learn_java/addressbook/appmanager/ApplicationManager.java
+ learn_java.addressbook.appmanager.ApplicationManager
+learn_java/addressbook/appmanager/GroupHelper.java
+ learn_java.addressbook.appmanager.GroupHelper
+learn_java/addressbook/appmanager/ContactHelper.java
+ learn_java.addressbook.appmanager.ContactHelper
+learn_java/addressbook/model/ContactData.java
+ learn_java.addressbook.model.ContactData
+learn_java/addressbook/appmanager/NavigationHelper.java
+ learn_java.addressbook.appmanager.NavigationHelper
+learn_java/addressbook/generators/GroupDataGenerator.java
+ learn_java.addressbook.generators.GroupDataGenerator
+LastLesson.java
+ LastLesson
+learn_java/addressbook/model/GroupData.java
+ learn_java.addressbook.model.GroupData
+learn_java/addressbook/model/Contacts.java
+ learn_java.addressbook.model.Contacts
+learn_java/addressbook/tests/TestBase.java
+ learn_java.addressbook.tests.TestBase
+learn_java/addressbook/tests/ContactModificationTests.java
+ learn_java.addressbook.tests.ContactModificationTests
+learn_java/addressbook/tests/GroupCreationTests.java
+ learn_java.addressbook.tests.GroupCreationTests
+ learn_java.addressbook.tests.GroupCreationTests$1
+learn_java/addressbook/tests/ContactCreationTests.java
+ learn_java.addressbook.tests.ContactCreationTests
+learn_java/addressbook/tests/ContactPhoneTests.java
+ learn_java.addressbook.tests.ContactPhoneTests
+learn_java/addressbook/tests/ContactDeletionTests.java
+ learn_java.addressbook.tests.ContactDeletionTests
+learn_java/addressbook/tests/GroupDeletionTests.java
+ learn_java.addressbook.tests.GroupDeletionTests
+learn_java/addressbook/tests/GroupModificationTests.java
+ learn_java.addressbook.tests.GroupModificationTests
+learn_java/addressbook/tests/DbConnectionTest.java
+ learn_java.addressbook.tests.DbConnectionTest
