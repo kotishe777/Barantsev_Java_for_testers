@@ -1,16 +1,13 @@
 package learn_java.addressbook.tests;
 
 import learn_java.addressbook.model.ContactData;
-import learn_java.addressbook.model.Contacts;
+import learn_java.addressbook.model.Groups;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.File;
-import java.util.Set;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
-
-public class ContactCreationTests extends TestBase{
+public class ContactCreationTests extends TestBase {
 
 //  @Test (enabled = false)
 //  public void testContactCreation() throws Exception {
@@ -19,29 +16,21 @@ public class ContactCreationTests extends TestBase{
 //
 //  }
 
-  File photo = new File("src/test/resources/girl.png");
+    File photo = new File("src/test/resources/girl.png");
 
-  @Test
-  public void testContactCreation() {
-    app.goTo().homePage();
-    Contacts before = app.contact().allContacts();
-    ContactData contact = new ContactData().withFirstName("Jane").withLastName("Doe").withPhoto(photo);
-    app.contact().create(contact);
-    assertThat(app.contact().count(), equalTo(before.size() + 1));
-    Contacts after = app.contact().allContacts();
-    assertThat(after, equalTo(
-            before.withAdded(contact.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
-  }
-
-  @Test
-  public void testBadContactCreation() {
-    app.goTo().homePage();
-    Contacts before = app.contact().allContacts();
-    ContactData contact = new ContactData().withFirstName("TestFirstName'").withLastName("TestLastName'").withGroup("test1");
-    app.contact().create(contact);
-    assertThat(app.contact().count(), equalTo(before.size()));
-    Contacts after = app.contact().allContacts();
-    assertThat(after, equalTo(before));
-  }
-
+    @Test
+    public void testContactCreation() {
+        Groups groups = app.db().groups();
+        var before = app.db().contacts().stream().count();
+        File photo = new File("src/test/resources/girl.png");
+        ContactData newContact = new ContactData().withFirstName("Jane").withLastName("Doe").withPhoto(photo)
+                .inGroup(groups.iterator().next());
+        app.goTo().homePage();
+        app.contact().initContactCreation();
+        app.contact().fillContactForm(newContact, true);
+        app.contact().submitContactCreation();
+        app.contact().returnToHomePage();
+        var after = app.db().contacts().stream().count();
+        Assert.assertEquals(after, before + 1);
+    }
 }

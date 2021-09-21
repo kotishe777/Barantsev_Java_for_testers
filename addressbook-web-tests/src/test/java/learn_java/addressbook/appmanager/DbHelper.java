@@ -1,6 +1,7 @@
 package learn_java.addressbook.appmanager;
 
 import learn_java.addressbook.model.ContactData;
+import learn_java.addressbook.model.Contacts;
 import learn_java.addressbook.model.GroupData;
 import learn_java.addressbook.model.Groups;
 import org.hibernate.Session;
@@ -31,5 +32,14 @@ public class DbHelper {
         session.getTransaction().commit();
         session.close();
         return new Groups(result);
+    }
+
+    public Contacts contacts(){
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        List<ContactData> result = session.createQuery( "from ContactData" ).list();
+        session.getTransaction().commit();
+        session.close();
+        return new Contacts(result);
     }
 }

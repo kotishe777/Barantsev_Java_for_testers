@@ -1,17 +1,14 @@
 package learn_java.addressbook.tests;
 
 import learn_java.addressbook.model.ContactData;
-import learn_java.addressbook.model.Contacts;
+import learn_java.addressbook.model.Groups;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.Set;
+import java.io.File;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
-
-public class ContactModificationTests extends TestBase{
+public class ContactModificationTests extends TestBase {
 
 //  @Test (enabled = false)
 //  public void testContactModification() throws Exception {
@@ -28,25 +25,27 @@ public class ContactModificationTests extends TestBase{
 //    Assert.assertEquals(after, before);
 //  }
 
-  @BeforeMethod
-  public void ensurePreconditions() {
-    app.goTo().homePage();
-    if (app.contact().allContacts().size() == 0) {
-      app.contact().create(new ContactData().withFirstName("John").withLastName("Doe").withGroup("test1"));
+    @BeforeMethod
+    public void ensurePreconditions() {
+        app.goTo().homePage();
+        if (app.contact().allContacts().size() == 0) {
+//      app.contact().create(new ContactData().withFirstName("John").withLastName("Doe").withGroup("test1"));
+        }
     }
-  }
 
-  @Test
-  public void testContactModification() {
+    @Test
+    public void testContactModification() {
+        Groups groups = app.db().groups();
+        var beforeContactList = app.db().contacts().stream().count();
 
-    Contacts before = app.contact().allContacts();
-    ContactData modifiedContact = before.iterator().next();
-    ContactData contact = new ContactData()
-            .withId(modifiedContact.getId()).withFirstName("Jane").withLastName("Doe").withGroup("test1");
-    app.contact().modify(contact);
-    assertThat(app.contact().count(), equalTo(before.size()));
-    Contacts after = app.contact().allContacts();
-    assertThat(after, equalTo(before.without(modifiedContact).withAdded(contact)));
-  }
+        ContactData modifiedContact = app.contact().allContacts().iterator().next();
+        File photo = new File("src/test/resources/girl.png");
+        ContactData contact = new ContactData()
+                .withId(modifiedContact.getId()).withFirstName("Jane").withLastName("Doe").withPhoto(photo).inGroup(groups.iterator().next());
+        app.contact().modify(contact);
+
+        var afterContactList = app.db().contacts().stream().count();
+        Assert.assertEquals(afterContactList, beforeContactList + 1);
+    }
 
 }
