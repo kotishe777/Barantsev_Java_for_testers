@@ -29,7 +29,15 @@ public class ContactModificationTests extends TestBase {
     public void ensurePreconditions() {
         app.goTo().homePage();
         if (app.contact().allContacts().size() == 0) {
-//      app.contact().create(new ContactData().withFirstName("John").withLastName("Doe").withGroup("test1"));
+            Groups groups = app.db().groups();
+            File photo = new File("src/test/resources/girl.png");
+            ContactData newContact = new ContactData().withFirstName("Jane").withLastName("Doe").withPhoto(photo)
+                    .inGroup(groups.iterator().next());
+            app.goTo().homePage();
+            app.contact().initContactCreation();
+            app.contact().fillContactForm(newContact, true);
+            app.contact().submitContactCreation();
+            app.contact().returnToHomePage();
         }
     }
 
