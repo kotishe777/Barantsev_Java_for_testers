@@ -13,7 +13,8 @@ dependencies {
     implementation 'com.thoughtworks.xstream:xstream:1.4.17'
     implementation 'com.google.code.gson:gson:2.8.7'
     implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.5'
-
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.26'
+    implementation 'org.hibernate:hibernate-core:5.5.6.Final'
 }
 
 task testGroups (type: Test) {
@@ -25,6 +26,9 @@ task testGroups (type: Test) {
     }
     if (project.hasProperty('target')){
         systemProperty 'target', "${target}"
+    }
+    if (project.hasProperty('verifyUI')){
+        systemProperty 'verifyUI', "${verifyUI}"
     }
 }
 
@@ -38,6 +42,9 @@ task testContacts (type: Test) {
     }
     if (project.hasProperty('target')){
         systemProperty 'target', "${target}"
+    }
+    if (project.hasProperty('verifyUI')){
+        systemProperty 'verifyUI', "${verifyUI}"
     }
 }
 

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="learn_java.addressbook.tests.GroupModificationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-02T15:25:05" hostname="HRK1-LHP-A04858" time="1.699">
+  <properties/>
+  <testcase name="testGroupModification" classname="learn_java.addressbook.tests.GroupModificationTests" time="1.699"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
