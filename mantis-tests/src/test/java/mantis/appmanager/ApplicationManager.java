@@ -30,7 +30,9 @@ public class ApplicationManager {
     if (browser.equals(BrowserType.FIREFOX)){
       wd = new FirefoxDriver();
     } else if (browser.equals(BrowserType.CHROME)){
+//      System.setProperty("webdriver.chrome.driver", "C:\\Users\\kateryna.cherkashyna\\IdeaProjects\\Learn_Automation_QA\\addressbook-web-tests\\chromedriver.exe");
       wd = new ChromeDriver();
+
     } else if (browser.equals(BrowserType.IE)){
       wd = new InternetExplorerDriver();
     }
@@ -40,6 +42,14 @@ public class ApplicationManager {
 
   public void stop() {
     wd.quit();
+  }
+
+  public HttpSession newSession(){
+    return new HttpSession(this);
+  }
+
+  public String getProperty(String key) {
+    return properties.getProperty(key);
   }
 }
 
