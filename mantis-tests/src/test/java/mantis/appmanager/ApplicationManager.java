@@ -17,9 +17,10 @@ public class ApplicationManager {
     private WebDriver wd;
 
     private String browser;
-  private RegistrationHelper registrationHelper;
+    private RegistrationHelper registrationHelper;
+    private FtpHelper ftp;
 
-  public ApplicationManager(String browser) {
+    public ApplicationManager(String browser) {
         this.browser = browser;
         properties = new Properties();
     }
@@ -30,9 +31,9 @@ public class ApplicationManager {
     }
 
     public void stop() {
-      if (wd != null){
-        wd.quit();
-      }
+        if (wd != null) {
+            wd.quit();
+        }
     }
 
     public HttpSession newSession() {
@@ -44,11 +45,19 @@ public class ApplicationManager {
     }
 
     public RegistrationHelper registration() {
-      if (registrationHelper == null) {
-        registrationHelper = new RegistrationHelper(this);
-      }
-      return registrationHelper;
+        if (registrationHelper == null) {
+            registrationHelper = new RegistrationHelper(this);
+        }
+        return registrationHelper;
     }
+
+    public FtpHelper ftp() {
+        if (ftp == null) {
+            ftp = new FtpHelper(this);
+        }
+        return ftp;
+    }
+
     public WebDriver getDriver() {
         if (wd == null) {
             if (browser.equals(BrowserType.FIREFOX)) {
