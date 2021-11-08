@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="learn_java.sandbox.PrimeTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-11-08T19:04:32" hostname="HRK1-LHP-A04858" time="4.553">
+  <properties/>
+  <testcase name="testPrime" classname="learn_java.sandbox.PrimeTests" time="4.551"/>
+  <testcase name="testNonPrime" classname="learn_java.sandbox.PrimeTests" time="0.0"/>
+  <testcase name="testPrimeFast" classname="learn_java.sandbox.PrimeTests" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
