@@ -31,7 +31,7 @@ public class ApplicationManager {
         properties = new Properties();
     }
 
-    public void init() throws IOException, InterruptedException {
+    public void init() throws IOException {
         String target = System.getProperty("target", "local");
         properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
         dbHelper = new DbHelper();
@@ -49,8 +49,7 @@ public class ApplicationManager {
         } else {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setBrowserName(browser);
-            new RemoteWebDriver(new URL(properties.getProperty("selenium.server")), capabilities);
-            Thread.sleep(5000);
+            wd = new RemoteWebDriver(new URL(properties.getProperty("selenium.server")), capabilities);
         }
 
         wd.manage().
