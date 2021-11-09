@@ -31,7 +31,7 @@ public class ApplicationManager {
         properties = new Properties();
     }
 
-    public void init() throws IOException {
+    public void init() throws IOException, InterruptedException {
         String target = System.getProperty("target", "local");
         properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
         dbHelper = new DbHelper();
@@ -40,7 +40,8 @@ public class ApplicationManager {
             if (browser.equals(BrowserType.FIREFOX)) {
                 wd = new FirefoxDriver();
             } else if (browser.equals(BrowserType.CHROME)) {
-//                System.setProperty("webdriver.chrome.driver", "D:\\Projects\\LearningProjects\\Learn_Automation_QA\\addressbook-web-tests\\chromedriver.exe");
+// System.setProperty("webdriver.chrome.driver", "D:\\Projects\\LearningProjects\\Learn_Automation_QA\\addressbook-web-tests\\chromedriver.exe");
+// -Dwebdriver.chrome.driver=-Dwebdriver.chrome.driver=D:\\Projects\\LearningProjects\\Learn_Automation_QA\\addressbook-web-tests\\chromedriver.exe
                 wd = new ChromeDriver();
             } else if (browser.equals(BrowserType.IE)) {
                 wd = new InternetExplorerDriver();
@@ -49,7 +50,9 @@ public class ApplicationManager {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setBrowserName(browser);
             new RemoteWebDriver(new URL(properties.getProperty("selenium.server")), capabilities);
+            Thread.sleep(5000);
         }
+
         wd.manage().
 
                 timeouts().
