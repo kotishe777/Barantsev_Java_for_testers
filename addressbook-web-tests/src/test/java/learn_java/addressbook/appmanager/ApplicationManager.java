@@ -40,7 +40,7 @@ public class ApplicationManager {
             if (browser.equals(BrowserType.FIREFOX)) {
                 wd = new FirefoxDriver();
             } else if (browser.equals(BrowserType.CHROME)) {
-                System.setProperty("webdriver.chrome.driver", "D:\\Projects\\LearningProjects\\Learn_Automation_QA\\addressbook-web-tests\\chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "D:/Projects/LearningProjects/Learn_Automation_QA/addressbook-web-tests/chromedriver.exe");
                 wd = new ChromeDriver();
             } else if (browser.equals(BrowserType.IE)) {
                 wd = new InternetExplorerDriver();
