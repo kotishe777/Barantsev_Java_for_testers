@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="learn_java.addressbook.tests.ContactCreationTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-08-02T15:25:08" hostname="HRK1-LHP-A04858" time="2.134">
-  <properties/>
-  <testcase name="testBadContactCreation" classname="learn_java.addressbook.tests.ContactCreationTests" time="1.271"/>
-  <testcase name="testContactCreation" classname="learn_java.addressbook.tests.ContactCreationTests" time="0.862"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
