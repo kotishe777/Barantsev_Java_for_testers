@@ -41,6 +41,7 @@ public class ApplicationManager {
             if (browser.equals(BrowserType.FIREFOX)) {
                 wd = new FirefoxDriver();
             } else if (browser.equals(BrowserType.CHROME)) {
+                System.setProperty("webdriver.chrome.driver", "D:\\Projects\\LearningProjects\\Learn_Automation_QA\\addressbook-web-tests\\chromedriver.exe");
                 wd = new ChromeDriver();
             } else if (browser.equals(BrowserType.IE)) {
                 wd = new InternetExplorerDriver();
@@ -50,12 +51,27 @@ public class ApplicationManager {
             capabilities.setBrowserName(browser);
             new RemoteWebDriver(new URL(properties.getProperty("selenium.server")), capabilities);
         }
-        wd.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        wd.manage().
+
+                timeouts().
+
+                implicitlyWait(0, TimeUnit.SECONDS);
         wd.get(properties.getProperty("web.baseUrl"));
-        groupHelper = new GroupHelper(wd);
-        contactHelper = new ContactHelper(wd);
-        navigationHelper = new NavigationHelper(wd);
-        sessionHelper = new SessionHelper(wd);
+        groupHelper = new
+
+                GroupHelper(wd);
+
+        contactHelper = new
+
+                ContactHelper(wd);
+
+        navigationHelper = new
+
+                NavigationHelper(wd);
+
+        sessionHelper = new
+
+                SessionHelper(wd);
         sessionHelper.login(properties.getProperty("web.adminLogin"), properties.getProperty("web.adminPassword"));
     }
 
