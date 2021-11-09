@@ -2,6 +2,7 @@ package learn_java.addressbook.appmanager;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.BrowserType;
@@ -36,7 +37,9 @@ public class ApplicationManager {
         properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
         dbHelper = new DbHelper();
 
-        System.setProperty("webdriver.chrome.driver", "D:\\Projects\\LearningProjects\\Learn_Automation_QA\\addressbook-web-tests\\chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.setBinary("D:\\Projects\\LearningProjects\\Learn_Automation_QA\\addressbook-web-tests\\chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "D:\\Projects\\LearningProjects\\Learn_Automation_QA\\addressbook-web-tests\\chromedriver.exe");
 
         if ("".equals(properties.getProperty("selenium.server"))) {
             if (browser.equals(BrowserType.FIREFOX)) {
