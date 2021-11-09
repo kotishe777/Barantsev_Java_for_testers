@@ -44,7 +44,7 @@ public class ContactModificationTests extends TestBase {
     @Test
     public void testContactModification() {
         Groups groups = app.db().groups();
-        var beforeContactList = app.db().contacts().stream().count();
+        long beforeContactList = app.db().contacts().stream().count();
 
         ContactData modifiedContact = app.contact().allContacts().iterator().next();
         File photo = new File("src/test/resources/girl.png");
@@ -52,7 +52,7 @@ public class ContactModificationTests extends TestBase {
                 .withId(modifiedContact.getId()).withFirstName("Jane").withLastName("Doe").withPhoto(photo).inGroup(groups.iterator().next());
         app.contact().modify(contact);
 
-        var afterContactList = app.db().contacts().stream().count();
+        long afterContactList = app.db().contacts().stream().count();
         Assert.assertEquals(afterContactList, beforeContactList + 1);
     }
 

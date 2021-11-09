@@ -1,6 +1,6 @@
-learn_java/sandbox/SquareTests.java
- learn_java.sandbox.SquareTests
-learn_java/sandbox/EquationTests.java
- learn_java.sandbox.EquationTests
 learn_java/sandbox/PrimeTests.java
  learn_java.sandbox.PrimeTests
+learn_java/sandbox/EquationTests.java
+ learn_java.sandbox.EquationTests
+learn_java/sandbox/SquareTests.java
+ learn_java.sandbox.SquareTests

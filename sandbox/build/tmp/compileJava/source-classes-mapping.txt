@@ -1,12 +1,14 @@
-learn_java/sandbox/Rectangle.java
- learn_java.sandbox.Rectangle
 learn_java/sandbox/Equation.java
  learn_java.sandbox.Equation
-learn_java/sandbox/Square.java
- learn_java.sandbox.Square
+learn_java/sandbox/Rectangle.java
+ learn_java.sandbox.Rectangle
+learn_java/sandbox/Collections.java
+ learn_java.sandbox.Collections
+learn_java/sandbox/MyFirstProgram.java
+ learn_java.sandbox.MyFirstProgram
 learn_java/sandbox/Equality.java
  learn_java.sandbox.Equality
 learn_java/sandbox/Primes.java
  learn_java.sandbox.Primes
-learn_java/sandbox/Collections.java
- learn_java.sandbox.Collections
+learn_java/sandbox/Square.java
+ learn_java.sandbox.Square

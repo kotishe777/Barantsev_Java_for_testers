@@ -21,7 +21,7 @@ public class ContactCreationTests extends TestBase {
     @Test
     public void testContactCreation() {
         Groups groups = app.db().groups();
-        var before = app.db().contacts().stream().count();
+        long before = app.db().contacts().stream().count();
         File photo = new File("src/test/resources/girl.png");
         ContactData newContact = new ContactData().withFirstName("Jane").withLastName("Doe").withPhoto(photo)
                 .inGroup(groups.iterator().next());
@@ -30,7 +30,7 @@ public class ContactCreationTests extends TestBase {
         app.contact().fillContactForm(newContact, true);
         app.contact().submitContactCreation();
         app.contact().returnToHomePage();
-        var after = app.db().contacts().stream().count();
+        long after = app.db().contacts().stream().count();
         Assert.assertEquals(after, before + 1);
     }
 }
