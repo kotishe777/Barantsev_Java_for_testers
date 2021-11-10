@@ -1,5 +1,6 @@
 package learn_java.addressbook.appmanager;
 
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -41,7 +42,7 @@ public class ApplicationManager {
                 wd = new FirefoxDriver();
             } else if (browser.equals(BrowserType.CHROME)) {
 // System.setProperty("webdriver.chrome.driver", "D:\\Projects\\LearningProjects\\Learn_Automation_QA\\addressbook-web-tests\\chromedriver.exe");
-// -Dwebdriver.chrome.driver=-Dwebdriver.chrome.driver=D:\\Projects\\LearningProjects\\Learn_Automation_QA\\addressbook-web-tests\\chromedriver.exe
+// -Dwebdriver.chrome.driver=-Dwebdriver.chrome.driver=D:\Projects\LearningProjects\Learn_Automation_QA\addressbook-web-tests\chromedriver.exe
                 wd = new ChromeDriver();
             } else if (browser.equals(BrowserType.IE)) {
                 wd = new InternetExplorerDriver();
@@ -49,6 +50,7 @@ public class ApplicationManager {
         } else {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setBrowserName(browser);
+            capabilities.setPlatform(Platform.fromString(System.getProperty("platform", "win10")));
             wd = new RemoteWebDriver(new URL(properties.getProperty("selenium.server")), capabilities);
         }
 
