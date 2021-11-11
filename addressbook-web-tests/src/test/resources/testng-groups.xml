@@ -4,9 +4,9 @@
 <!--    parallel="classes" thread-count="3"-->
     <test name="Groups" >
         <classes>
-<!--            <class name="learn_java.addressbook.tests.GroupCreationTests" />-->
+            <class name="learn_java.addressbook.tests.GroupCreationTests" />
             <class name="learn_java.addressbook.tests.GroupModificationTests" />
-<!--            <class name="learn_java.addressbook.tests.GroupDeletionTests" />-->
+            <class name="learn_java.addressbook.tests.GroupDeletionTests" />
         </classes>
     </test>
 </suite>
