@@ -1,0 +1,32 @@
+mantis/model/Project.java
+ mantis.model.Project
+mantis/model/MailMessage.java
+ mantis.model.MailMessage
+mantis/LastLesson.java
+ mantis.LastLesson
+mantis/tests/SoapTests.java
+ mantis.tests.SoapTests
+mantis/appmanager/ApplicationManager.java
+ mantis.appmanager.ApplicationManager
+mantis/appmanager/JamesHelper.java
+ mantis.appmanager.JamesHelper
+mantis/appmanager/RegistrationHelper.java
+ mantis.appmanager.RegistrationHelper
+mantis/appmanager/MailHelper.java
+ mantis.appmanager.MailHelper
+mantis/appmanager/HelperBase.java
+ mantis.appmanager.HelperBase
+mantis/appmanager/FtpHelper.java
+ mantis.appmanager.FtpHelper
+mantis/appmanager/SoapHelper.java
+ mantis.appmanager.SoapHelper
+mantis/tests/TestBase.java
+ mantis.tests.TestBase
+mantis/appmanager/HttpSession.java
+ mantis.appmanager.HttpSession
+mantis/tests/LoginTests.java
+ mantis.tests.LoginTests
+mantis/tests/RegistrationTests.java
+ mantis.tests.RegistrationTests
+mantis/model/Issue.java
+ mantis.model.Issue

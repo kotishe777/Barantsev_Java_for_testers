@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="sandbox">
+    <test verbose="2" preserve-order="true" name="D:/Projects/LearningProjects/Learn_Automation_QA/sandbox">
+        <classes>
+            <class name="learn_java.sandbox.EquationTests">
+                <methods>
+                    <include name="test0"/>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                    <include name="testLinear"/>
+                    <include name="testConstant"/>
+                    <include name="testZero"/>
+                </methods>
+            </class>
+            <class name="learn_java.sandbox.PrimeTests">
+                <methods>
+                    <include name="testPrime"/>
+                    <include name="testNonPrime"/>
+                    <include name="testPrimeLong"/>
+                    <include name="testPrimeFast"/>
+                </methods>
+            </class>
+            <class name="learn_java.sandbox.SquareTests">
+                <methods>
+                    <include name="testArea"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

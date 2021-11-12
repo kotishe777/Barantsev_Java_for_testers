@@ -40,6 +40,10 @@ learn_java/addressbook/appmanager/NavigationHelper.java
  learn_java.addressbook.appmanager.NavigationHelper
 learn_java/addressbook/tests/HbConnectionTest.java
  learn_java.addressbook.tests.HbConnectionTest
+learn_java/addressbook/tests/MyTestListener.java
+ learn_java.addressbook.tests.MyTestListener
 learn_java/addressbook/tests/GroupCreationTests.java
  learn_java.addressbook.tests.GroupCreationTests
  learn_java.addressbook.tests.GroupCreationTests$1
+learn_java/addressbook/rf/AddressbookKeywords.java
+ learn_java.addressbook.rf.AddressbookKeywords

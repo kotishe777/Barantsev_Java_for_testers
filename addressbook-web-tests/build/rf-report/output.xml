@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generator="Robot 4.1.2 (Jython 2.7.2 on java15.0.2)" schemaversion="2" generated="20211112 11:29:11.925">
+<suite source="D:\Projects\LearningProjects\Learn_Automation_QA\addressbook-web-tests\src\test\resources\rf" name="Rf" id="s1">
+<suite source="D:\Projects\LearningProjects\Learn_Automation_QA\addressbook-web-tests\src\test\resources\rf\groups.robot" name="Groups" id="s1-s1">
+<kw type="SETUP" library="learn_java.addressbook.rf.AddressbookKeywords" name="Init Application Manager">
+<msg level="INFO" timestamp="20211112 11:29:16.013">Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+Starting ChromeDriver 95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}) on port 29566
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+org.openqa.selenium.remote.ProtocolHandshake INFO Detected dialect: W3C</msg>
+<status endtime="20211112 11:29:16.017" starttime="20211112 11:29:12.177" status="PASS"/>
+</kw>
+<test name="Can Create Group With Valid Data" id="s1-s1-t1">
+<kw library="learn_java.addressbook.rf.AddressbookKeywords" name="Get Group Count">
+<var>${old_count}</var>
+<msg level="INFO" timestamp="20211112 11:29:16.210">${old_count} = 8</msg>
+<status endtime="20211112 11:29:16.211" starttime="20211112 11:29:16.026" status="PASS"/>
+</kw>
+<kw library="learn_java.addressbook.rf.AddressbookKeywords" name="Create Group">
+<arg>test name</arg>
+<arg>test header</arg>
+<arg>test footer</arg>
+<status endtime="20211112 11:29:16.948" starttime="20211112 11:29:16.212" status="PASS"/>
+</kw>
+<kw library="learn_java.addressbook.rf.AddressbookKeywords" name="Get Group Count">
+<var>${new_count}</var>
+<msg level="INFO" timestamp="20211112 11:29:17.052">${new_count} = 9</msg>
+<status endtime="20211112 11:29:17.055" starttime="20211112 11:29:16.949" status="PASS"/>
+</kw>
+<kw library="BuiltIn" name="Evaluate">
+<var>${expected_count}</var>
+<arg>${old_count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg level="INFO" timestamp="20211112 11:29:17.068">${expected_count} = 9</msg>
+<status endtime="20211112 11:29:17.069" starttime="20211112 11:29:17.057" status="PASS"/>
+</kw>
+<kw library="BuiltIn" name="Should Be Equal As Integers">
+<arg>${new_count}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status endtime="20211112 11:29:17.079" starttime="20211112 11:29:17.071" status="PASS"/>
+</kw>
+<status endtime="20211112 11:29:17.080" starttime="20211112 11:29:16.021" status="PASS"/>
+</test>
+<kw type="TEARDOWN" library="learn_java.addressbook.rf.AddressbookKeywords" name="Stop Application Manager">
+<status endtime="20211112 11:29:17.745" starttime="20211112 11:29:17.088" status="PASS"/>
+</kw>
+<status endtime="20211112 11:29:17.745" starttime="20211112 11:29:12.145" status="PASS"/>
+</suite>
+<status endtime="20211112 11:29:17.754" starttime="20211112 11:29:11.934" status="PASS"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" skip="0" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" skip="0" fail="0" name="Rf" id="s1">Rf</stat>
+<stat pass="1" skip="0" fail="0" name="Groups" id="s1-s1">Rf.Groups</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
