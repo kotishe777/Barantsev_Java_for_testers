@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1636714391929" stop="1636714398638">
+    <name>Default Suite</name>
+    <test-cases>
+        <test-case start="1636714392395" stop="1636714398597" status="failed">
+            <name>runScenario["Group creation","Optional[Groups]"]</name>
+            <failure>
+                <message>AssertionError: 
+Expected: &lt;[GroupData{id='48', name='test 0'}, GroupData{id='50', name='test 2'}, GroupData{id='2147483647', name='xxx'}, GroupData{id='47', name='test1'}, GroupData{id='57', name='test name'}, GroupData{id='54', name='test 0'}, GroupData{id='5', name='test2'}, GroupData{id='53', name='test 2'}, GroupData{id='55', name='test 1'}, GroupData{id='56', name='test 2'}]&gt;
+     but: was &lt;[GroupData{id='48', name='test 0'}, GroupData{id='50', name='test 2'}, GroupData{id='47', name='test1'}, GroupData{id='57', name='test name'}, GroupData{id='58', name='xxx'}, GroupData{id='54', name='test 0'}, GroupData{id='5', name='test2'}, GroupData{id='53', name='test 2'}, GroupData{id='55', name='test 1'}, GroupData{id='56', name='test 2'}]&gt;</message>
+                <stack-trace>java.lang.AssertionError: 
+Expected: &lt;[GroupData{id='48', name='test 0'}, GroupData{id='50', name='test 2'}, GroupData{id='2147483647', name='xxx'}, GroupData{id='47', name='test1'}, GroupData{id='57', name='test name'}, GroupData{id='54', name='test 0'}, GroupData{id='5', name='test2'}, GroupData{id='53', name='test 2'}, GroupData{id='55', name='test 1'}, GroupData{id='56', name='test 2'}]&gt;
+     but: was &lt;[GroupData{id='48', name='test 0'}, GroupData{id='50', name='test 2'}, GroupData{id='47', name='test1'}, GroupData{id='57', name='test name'}, GroupData{id='58', name='xxx'}, GroupData{id='54', name='test 0'}, GroupData{id='5', name='test2'}, GroupData{id='53', name='test 2'}, GroupData{id='55', name='test 1'}, GroupData{id='56', name='test 2'}]&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at learn_java.addressbook.bdd.GroupStepDefinitions.verifyGroupCreated(GroupStepDefinitions.java:51)
+	at ✽.the new set of groups is equal the old set with the added group(file:///D:/Projects/LearningProjects/Learn_Automation_QA/addressbook-web-tests/src/test/resources/bdd/groups.feature:6)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels/>
+        </test-case>
+    </test-cases>
+    <labels/>
+</ns2:test-suite>
