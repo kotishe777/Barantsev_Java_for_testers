@@ -22,7 +22,7 @@ public class FirstTest {
     }
 
     @Test
-    public void myFirstTest() throws InterruptedException, UnsupportedEncodingException {
+    public void myFirstTest() throws InterruptedException {
         driver.get("https://www.google.com/");
         driver.findElement(By.name("q")).sendKeys("webdriver");
         Thread.sleep(1000);
@@ -33,7 +33,7 @@ public class FirstTest {
             String priwet = new String(
                     "\u041F" + "\u043E" + "\u0448" + "\u0443" + "\u043A");
             byte[] utf8Bytes = priwet.getBytes("UTF8");
-            s = new String(utf8Bytes,"UTF8");
+            s = new String(utf8Bytes, "UTF8");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
