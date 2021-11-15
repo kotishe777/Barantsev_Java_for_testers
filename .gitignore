@@ -2,3 +2,11 @@
 */out
 .idea
 .gradle
+/addressbook-web-tests/.gradle/
+/addressbook-web-tests/.idea/
+/github-sample/.gradle/
+/mantis-tests/.gradle/
+/rest-sample/.gradle/
+/sandbox/.gradle/
+/selenium-sample/.gradle/
+/soap-sample/.gradle/
