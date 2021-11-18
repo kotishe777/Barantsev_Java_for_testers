@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FirstTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-15T17:18:44" hostname="HRK1-LHP-A04858" time="6.502">
+<testsuite name="FirstTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-18T20:09:18" hostname="HRK1-LHP-A04858" time="11.943">
   <properties/>
-  <testcase name="myFirstTest" classname="FirstTest" time="6.502"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="myFirstTest" classname="FirstTest" time="11.943"/>
+  <system-out><![CDATA[Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 95.0.1020.53, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:55505}, msedge: {msedgedriverVersion: 95.0.1020.44 (745fe8ef5b67d..., userDataDir: C:\Users\KATERY~1.CHE\AppDa...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55505/devtoo..., se:cdpVersion: 95.0.1020.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+]]></system-out>
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 94.0.4606.41 (333e85df3c9b656b518b5f1add5ff246365b6c24-refs/branch-heads/4606@{#845}) on port 55803
+Starting MSEdgeDriver 95.0.1020.44 (745fe8ef5b67d47d72474a3d53158348db16aeba) on port 61099
 Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-[1636996726.932][WARNING]: This version of ChromeDriver has not been tested with Chrome version 95.
-Nov 15, 2021 7:18:47 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping MSEdgeDriver safe.
+MSEdgeDriver was started successfully.
+Nov 18, 2021 10:09:25 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-Nov 15, 2021 7:18:47 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Nov 18, 2021 10:09:25 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found exact CDP implementation for version 95
 ]]></system-err>
 </testsuite>
