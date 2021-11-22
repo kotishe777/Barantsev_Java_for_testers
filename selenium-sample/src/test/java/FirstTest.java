@@ -6,7 +6,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.HasCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import sun.security.krb5.internal.crypto.Des;
@@ -22,9 +24,24 @@ public class FirstTest {
     @Before
     public void start() {
         DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability("unexpectedAlertBehaviour", "dismiss");
-        driver = new EdgeDriver(caps);
+        caps.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
+        caps.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+        driver = new InternetExplorerDriver(caps);
         System.out.println(((HasCapabilities) driver).getCapabilities());
+
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("start-fullscreen");
+//        driver = new ChromeDriver(options);
+//        OR
+//        DesiredCapabilities caps = new DesiredCapabilities();
+//        caps.setCapability(ChromeOptions.CAPABILITY, options);
+//        driver = new ChromeDriver(caps);
+
+//        DesiredCapabilities caps = new DesiredCapabilities();
+//        caps.setCapability("unexpectedAlertBehaviour", "dismiss");
+//        driver = new ChromeDriver(caps);
+//        System.out.println(((HasCapabilities) driver).getCapabilities());
+
         wait = new WebDriverWait(driver, 10);
     }
 
