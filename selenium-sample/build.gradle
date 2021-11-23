@@ -1,3 +1,5 @@
+import org.gradle.api.tasks.compile.JavaCompile
+
 plugins {
     id 'java'
 }
@@ -12,4 +14,12 @@ repositories {
 dependencies {
     implementation 'junit:junit:4.13.2'
     implementation 'org.seleniumhq.selenium:selenium-java:4.0.0'
+}
+
+test {
+    maxParallelForks = 10;
+}
+
+tasks.withType(JavaCompile){
+    options.encoding = 'UTF-8'
 }

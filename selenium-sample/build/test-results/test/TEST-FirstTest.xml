@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FirstTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-23T18:59:11" hostname="HRK1-LHP-A04858" time="13.617">
+<testsuite name="FirstTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-11-23T21:47:22" hostname="HRK1-LHP-A04858" time="14.774">
   <properties/>
-  <testcase name="myFirstTest" classname="FirstTest" time="13.617"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="myThirdTest" classname="FirstTest" time="8.907"/>
+  <testcase name="mySecondTest" classname="FirstTest" time="2.895"/>
+  <testcase name="myFirstTest" classname="FirstTest" time="2.972"/>
+  <system-out><![CDATA[[DV=s9OAFNYNTIMkoLzqnEwKQNBxY0rs1FegFLPp11GAXgMAAAA; expires=Tue, 23 Nov 2021 11:57:30 EET; path=/; domain=www.google.com, NID=511=UBLZKLDe2S2CmeFXFX8PJBIgioKgQTL_aoWU6bpkOZ8VEasILmaD38lDm8F45P8UGo3xLE8pw52Gw8DscNV2CP-W0rqCxgHDJ57DsbX5LUIe7gQ7MPXKUgG55p8PrDaMBZCh9fIZDMjyWYpH-DQoMs56clB5eFSJBLHGDxcn8Qs; expires=Thu, 26 May 2022 12:47:30 EEST; path=/; domain=.google.com;secure;; sameSite=None, 1P_JAR=2021-11-23-21; expires=Thu, 23 Dec 2021 11:47:30 EET; path=/; domain=.google.com;secure;; sameSite=None, UULE=a+cm9sZTogMQpwcm9kdWNlcjogMTIKdGltZXN0YW1wOiAxNjM3NzA0MDUwOTg2MDAwCmxhdGxuZyB7CiAgbGF0aXR1ZGVfZTc6IDUwMDE5NjM4MgogIGxvbmdpdHVkZV9lNzogMzYyMjYyOTY0Cn0KcmFkaXVzOiAyNTczNDU1Ljg4MzgyMDE2NzcKcHJvdmVuYW5jZTogNgo=; expires=Wed, 24 Nov 2021 05:47:31 EET; path=/; domain=www.google.com;secure;]
+[DV=s9OAFNYNTIMkECjFbPp1FKA3K0vs1JfyqnMyKQBBBwQAAAA; expires=Tue, 23 Nov 2021 11:57:34 EET; path=/; domain=www.google.com, NID=511=UBLZKLDe2S2CmeFXFX8PJBIgioKgQTL_aoWU6bpkOZ8VEasILmaD38lDm8F45P8UGo3xLE8pw52Gw8DscNV2CP-W0rqCxgHDJ57DsbX5LUIe7gQ7MPXKUgG55p8PrDaMBZCh9fIZDMjyWYpH-DQoMs56clB5eFSJBLHGDxcn8Qs; expires=Thu, 26 May 2022 12:47:30 EEST; path=/; domain=.google.com;secure;; sameSite=None, 1P_JAR=2021-11-23-21; expires=Thu, 23 Dec 2021 11:47:33 EET; path=/; domain=.google.com;secure;; sameSite=None, UULE=a+cm9sZTogMQpwcm9kdWNlcjogMTIKdGltZXN0YW1wOiAxNjM3NzA0MDU0MDMwMDAwCmxhdGxuZyB7CiAgbGF0aXR1ZGVfZTc6IDUwMDE5NjM4MgogIGxvbmdpdHVkZV9lNzogMzYyMjYyOTY0Cn0KcmFkaXVzOiAyNTczNDU1Ljg4MzgyMDE2NzcKcHJvdmVuYW5jZTogNgo=; expires=Wed, 24 Nov 2021 05:47:34 EET; path=/; domain=www.google.com;secure;]
+[DV=s9OAFNYNTIMkECjFbPp1FKAH-0vs1JfyqnMyKQBBBwEAAAA; expires=Tue, 23 Nov 2021 11:57:37 EET; path=/; domain=www.google.com, NID=511=UBLZKLDe2S2CmeFXFX8PJBIgioKgQTL_aoWU6bpkOZ8VEasILmaD38lDm8F45P8UGo3xLE8pw52Gw8DscNV2CP-W0rqCxgHDJ57DsbX5LUIe7gQ7MPXKUgG55p8PrDaMBZCh9fIZDMjyWYpH-DQoMs56clB5eFSJBLHGDxcn8Qs; expires=Thu, 26 May 2022 12:47:30 EEST; path=/; domain=.google.com;secure;; sameSite=None, 1P_JAR=2021-11-23-21; expires=Thu, 23 Dec 2021 11:47:37 EET; path=/; domain=.google.com;secure;; sameSite=None, UULE=a+cm9sZTogMQpwcm9kdWNlcjogMTIKdGltZXN0YW1wOiAxNjM3NzA0MDU0ODgzMDAwCmxhdGxuZyB7CiAgbGF0aXR1ZGVfZTc6IDUwMDE5NjM4MgogIGxvbmdpdHVkZV9lNzogMzYyMjYyOTY0Cn0KcmFkaXVzOiAyNTczNDU1Ljg4MzgyMDE2NzcKcHJvdmVuYW5jZTogNgo=; expires=Wed, 24 Nov 2021 05:47:34 EET; path=/; domain=www.google.com;secure;]
+]]></system-out>
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-1637693952978	geckodriver	INFO	Listening on 127.0.0.1:50744
-1637693953739	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61702" "-no-remote" "-profile" "C:\\Users\\KATERY~1.CHE\\AppData\\Local\\Temp\\rust_mozprofilezZ0xsr"
-1637693955116	Marionette	INFO	Marionette enabled
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\kateryna.cherkashyna\\AppData\\Local\\Temp\\rust_mozprofilezZ0xsr\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:61702/devtools/browser/34d72d81-64c7-4244-b96b-0f0e326e3781
-1637693957897	Marionette	INFO	Listening on port 53502
-1637693958252	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-Nov 23, 2021 8:59:18 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+Starting ChromeDriver 96.0.4664.45 (76e4c1bb2ab4671b8beba3444e61c0f17584b2fc-refs/branch-heads/4664@{#947}) on port 50807
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Nov 23, 2021 11:47:26 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-1637693964193	Marionette	INFO	Stopped listening on port 53502
-JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
-
-###!!! [Child][MessageChannel] Error: (msgtype=0x680023,name=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
-
-
-###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
-
+Nov 23, 2021 11:47:26 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 96, so returning the closest version found: 95
+Nov 23, 2021 11:47:26 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Found CDP implementation for version 96 of 95
 ]]></system-err>
 </testsuite>

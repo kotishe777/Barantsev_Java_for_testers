@@ -1,4 +1,10 @@
 LastLesson.java
  LastLesson
+TestBase.java
+ TestBase
+SecondTest.java
+ SecondTest
 FirstTest.java
  FirstTest
+ThirdTest.java
+ ThirdTest
