@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 
 import java.io.UnsupportedEncodingException;
 
+import static org.junit.Assert.assertFalse;
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 
 public class FirstTest extends TestBase {
@@ -12,6 +13,10 @@ public class FirstTest extends TestBase {
     public void myFirstTest() throws InterruptedException {
         driver.navigate().to("https://www.google.com/");
         driver.findElement(By.name("q")).sendKeys("webdriver");
+
+        assertFalse(isElementPresent(By.name("XXX")));
+        assertFalse(areElementsPresent(By.name("XXX")));
+
         Thread.sleep(1000);
         driver.findElement(By.name("btnK")).click();
 
