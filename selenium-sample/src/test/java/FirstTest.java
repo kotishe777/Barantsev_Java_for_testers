@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import java.io.UnsupportedEncodingException;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 
 public class FirstTest extends TestBase {
@@ -19,6 +20,8 @@ public class FirstTest extends TestBase {
 
         Thread.sleep(1000);
         driver.findElement(By.name("btnK")).click();
+
+        assertTrue(isElementPresent(By.cssSelector(".rc")));
 
         String s = null;
         try {
